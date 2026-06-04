@@ -955,14 +955,14 @@
                 <div class="gallery-item" data-src="gallery/010.jpeg"><img src="gallery/010.jpeg" alt="Arha Luxury Asset" loading="lazy"><div class="gallery-overlay"><span>Enlarge</span></div></div>
                 <div class="gallery-item" data-src="gallery/011.jpeg"><img src="gallery/011.jpeg" alt="Arha Luxury Asset" loading="lazy"><div class="gallery-overlay"><span>Enlarge</span></div></div>
                 <div class="gallery-item" data-src="gallery/012.jpeg"><img src="gallery/012.jpeg" alt="Arha Luxury Asset" loading="lazy"><div class="gallery-overlay"><span>Enlarge</span></div></div>
-				<div class="gallery-item" data-src="gallery/013.jpeg"><img src="gallery/013.jpeg" alt="Arha Luxury Asset" loading="lazy"><div class="gallery-overlay"><span>Enlarge</span></div></div>	
+                <div class="gallery-item" data-src="gallery/013.jpeg"><img src="gallery/013.jpeg" alt="Arha Luxury Asset" loading="lazy"><div class="gallery-overlay"><span>Enlarge</span></div></div>	
                 <div class="gallery-item" data-src="gallery/014.jpeg"><img src="gallery/014.jpeg" alt="Arha Luxury Asset" loading="lazy"><div class="gallery-overlay"><span>Enlarge</span></div></div>
                 <div class="gallery-item" data-src="gallery/015.jpeg"><img src="gallery/015.jpeg" alt="Arha Luxury Asset" loading="lazy"><div class="gallery-overlay"><span>Enlarge</span></div></div>
                 <div class="gallery-item" data-src="gallery/016.jpeg"><img src="gallery/016.jpeg" alt="Arha Luxury Asset" loading="lazy"><div class="gallery-overlay"><span>Enlarge</span></div></div>
                 <div class="gallery-item" data-src="gallery/017.jpeg"><img src="gallery/017.jpeg" alt="Arha Luxury Asset" loading="lazy"><div class="gallery-overlay"><span>Enlarge</span></div></div>
                 <div class="gallery-item" data-src="gallery/018.jpeg"><img src="gallery/018.jpeg" alt="Arha Luxury Asset" loading="lazy"><div class="gallery-overlay"><span>Enlarge</span></div></div>
-				<div class="gallery-item" data-src="gallery/019.jpeg"><img src="gallery/019.jpeg" alt="Arha Luxury Asset" loading="lazy"><div class="gallery-overlay"><span>Enlarge</span></div></div>
-				<div class="gallery-item" data-src="gallery/020.jpeg"><img src="gallery/020.jpeg" alt="Arha Luxury Asset" loading="lazy"><div class="gallery-overlay"><span>Enlarge</span></div></div>
+                <div class="gallery-item" data-src="gallery/019.jpeg"><img src="gallery/019.jpeg" alt="Arha Luxury Asset" loading="lazy"><div class="gallery-overlay"><span>Enlarge</span></div></div>
+                <div class="gallery-item" data-src="gallery/020.jpeg"><img src="gallery/020.jpeg" alt="Arha Luxury Asset" loading="lazy"><div class="gallery-overlay"><span>Enlarge</span></div></div>
             </div>
         </div>
     </section>
@@ -1085,18 +1085,26 @@
 
                 <div class="b2b-form-panel">
                     <h3>Request Trade Pricing &amp; Catalogue</h3>
-                    <form action="#" onsubmit="event.preventDefault(); alert('Inquiry logged securely. Our commercial team will contact you shortly.');">
+                    
+                    <!-- UPDATED DYNAMIC STATIC BACKEND PORTAL FORM OVERLAYS -->
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <!-- paste your free web3forms key here -->
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                        
+                        <!-- Anti-spam honeypot (Invisible to users, stops bots) -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
                         <div class="form-group">
                             <label>Company / Store Name</label>
-                            <input type="text" class="form-control" placeholder="Enter business or retail store name" required>
+                            <input type="text" name="company_name" class="form-control" placeholder="Enter business or retail store name" required>
                         </div>
                         <div class="form-group">
                             <label>Corporate Email Address</label>
-                            <input type="email" class="form-control" placeholder="purchasing@yourstore.com" required>
+                            <input type="email" name="email" class="form-control" placeholder="purchasing@yourstore.com" required>
                         </div>
                         <div class="form-group">
                             <label>Minimum Order Volume / Product Inquiries</label>
-                            <textarea class="form-control" placeholder="Please outline your specific requirement, motif preferences, or inventory timelines..." required></textarea>
+                            <textarea name="inquiry_details" class="form-control" placeholder="Please outline your specific requirement, motif preferences, or inventory timelines..." required></textarea>
                         </div>
                         <button type="submit" class="btn-submit">Submit Trade Inquiry</button>
                     </form>
