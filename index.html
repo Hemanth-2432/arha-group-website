@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Arha Group - Where Indian heritage weaves with 22-carat gold. Discover timeless luxury apparel, pillow covers, and masterpieces crafted by skilled artisans.">
+    <meta name="keywords" content="Arha Group, Arha luxury, 22k gold saree, premium Indian heritage fashion, heirloom apparel, Swathi N, Arha the Billionaires Hereditary">
     <title>Arha Group | Arha the Billionaires Hereditary</title>
+    
+    <link rel="canonical" href="https://arhagroups.com/">
+
+    <meta property="og:title" content="Arha Group | Arha the Billionaires Hereditary">
+    <meta property="og:description" content="Discover timeless luxury apparel and masterpieces crafted with 22-carat gold by skilled artisans.">
+    <meta property="og:image" content="https://arhagroups.com/Logo.jpeg">
+    <meta property="og:url" content="https://arhagroups.com/">
+    <meta property="og:type" content="website">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -313,7 +322,7 @@
 
         /* --- ABOUT US SECTION --- */
         .about-us-intro {
-            background-color: rgba(255, 255, 255, 0.4); /* Made transparent to let watermark peek through beautifully */
+            background-color: rgba(255, 255, 255, 0.4); 
             text-align: center;
         }
 
@@ -397,7 +406,7 @@
 
         /* --- MEDIA GALLERY SECTION --- */
         .gallery {
-            background-color: transparent; /* Seamless transparent layout to feature full background depth */
+            background-color: transparent; 
         }
 
         .gallery-header {
@@ -1086,19 +1095,16 @@
                 <div class="b2b-form-panel">
                     <h3>Request Trade Pricing &amp; Catalogue</h3>
                     
-                    <!-- UPDATED DYNAMIC STATIC BACKEND PORTAL FORM OVERLAYS -->
                     <form action="https://api.web3forms.com/submit" method="POST">
-                        <!-- paste your free web3forms key here -->
                         <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
                         
-                        <!-- Anti-spam honeypot (Invisible to users, stops bots) -->
                         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
                         <div class="form-group">
-                            <label>Company / Store Name</label>
-                            <input type="text" name="company_name" class="form-control" placeholder="Enter business or retail store name" required>
-                        </div>
-                        <div class="form-group">
+                            <div class="form-group">
+                                <label>Company / Store Name</label>
+                                <input type="text" name="company_name" class="form-control" placeholder="Enter business or retail store name" required>
+                            </div>
                             <label>Corporate Email Address</label>
                             <input type="email" name="email" class="form-control" placeholder="purchasing@yourstore.com" required>
                         </div>
@@ -1209,7 +1215,7 @@
             root: null,
             threshold: 0.05,
             rootMargin: '0px 0px -40px 0px'
-        };
+        }
 
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
